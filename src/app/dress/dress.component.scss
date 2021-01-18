@@ -1,0 +1,21 @@
+::ng-deep .modal-body{
+    text-align: right;
+}
+
+::ng-deep.far:before {
+    margin: 3px !important;
+    font-size: x-large !important;
+}
+::ng-deep.fas:before {
+    margin: 3px !important;
+    font-size: x-large !important;
+    //color: white;
+}
+.color-gold{
+    background-color:  #988236 !important;
+}
+
+.btn{
+    padding:10px !important;
+    border-radius: 150%;
+   }

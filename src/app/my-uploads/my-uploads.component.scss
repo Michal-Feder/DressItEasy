@@ -1,0 +1,49 @@
+.body{
+    padding: 5%;
+    padding-top: 1%;
+    margin: auto;
+    width: 90%;
+    margin-top: 6% !important;
+    margin-bottom: 3% !important;
+}
+::ng-deep .custom-control-inline {
+     display: block !important; 
+     margin-right: 0 !important; 
+}
+::ng-deep .custom-control-label::before {
+    margin-left: 100% !important;
+}
+::ng-deep .custom-control-label::after {
+    margin-left: 100% !important;
+}
+::ng-deep .custom-control-label::before {
+    margin-left: 100% !important;
+}
+::ng-deep .custom-control-label::after {
+    margin-left: 100% !important;
+}
+.span{
+    position: relative;
+    right: 30px;
+}
+::ng-deep .text .card-text:last-child {
+    margin-bottom: 0px !important;
+}
+
+::ng-deep.far:before {
+    margin: 3px !important;
+    font-size: x-large !important;
+}
+::ng-deep.fas:before {
+    margin: 3px !important;
+    font-size: x-large !important;
+    //color: white;
+}
+.color-gold{
+    background-color:  #988236 !important;
+}
+
+.btn{
+    padding:10px !important;
+    border-radius: 150%;
+   }

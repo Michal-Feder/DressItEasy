@@ -1,0 +1,73 @@
+<!--Navbar-->
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark black" [containerInside]="false" mdbStickyHeader>
+
+  <!-- Navbar brand -->
+
+  <!-- Collapsible content -->
+  <links>
+    <mdb-navbar-brand></mdb-navbar-brand>
+
+    <!-- Links -->
+    <ul class="navbar-nav mr-auto">
+      <li title="פרופיל" (click)='changeActive(0)' class="nav-item dropdown" dropdown>
+        <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+          <mdb-icon fas icon="user"></mdb-icon> <span class="caret"></span></a>
+        <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown dropdown-primary" role="menu">
+          <a [routerLink]="['/login']" class="dropdown-item waves-light" style="text-align: center;" mdbWavesEffect href="#">כניסה</a>
+          <a [routerLink]="['/my-uploads']" class="dropdown-item waves-light" style="text-align: center;" mdbWavesEffect href="#">השמלות שהעלתי</a>
+          <a class="dropdown-item waves-light" style="text-align: center;" mdbWavesEffect href="#">יציאה</a>
+        </div>
+      </li>
+      <li title="רשימת משאלות" (click)='changeActive(0)' [routerLink]="['/love']" class="nav-item">
+        <a class="nav-link">
+          <div class="btn-group" mdbDropdown>
+            <mdb-icon fas icon="heart"></mdb-icon>
+          </div>
+        </a>
+      </li>
+      <li title="עגלת קניות" (click)='changeActive(0)' [routerLink]="['/cart']" class="nav-item">
+        <a class="nav-link">
+          <div class="btn-group" mdbDropdown>
+            <mdb-icon fas icon="shopping-cart"></mdb-icon>
+          </div>
+        </a>
+      </li>
+    </ul>
+    <!-- Links -->
+
+    <ul class="navbar-nav ml-auto nav-flex-icons">
+      <li class="nav-item" id="5" (click)='changeActive(5)'>
+        <a [routerLink]="['/about']" class="nav-link waves-light" mdbWavesEffect>אודות</a>
+      </li>
+      <li class="nav-item" id="4" (click)='changeActive(4)'>
+        <a [routerLink]="['/upload']" class="nav-link waves-light" mdbWavesEffect>פרסום שמלה</a>
+      </li>
+      <li class="nav-item" id="3" (click)='changeActive(3)'>
+        <a [routerLink]="['/girl']" class="nav-link waves-light" mdbWavesEffect>ילדות</a>
+      </li>
+      <li class="nav-item" id="2" (click)='changeActive(2)'>
+        <a [routerLink]="['/maiden']" class="nav-link waves-light" mdbWavesEffect>נערות</a>
+      </li>
+      <li class="nav-item" id="1" (click)='changeActive(1)'>
+        <a [routerLink]="['/women']" class="nav-link waves-light" mdbWavesEffect>נשים</a>
+      </li>
+    </ul>
+    <mdb-navbar-brand (click)='changeActive(0)'><a class="navbar-brand space" href="#"><img style="    width: 250px;
+      padding-right: 12%;" src="../assets/image/logo_dress.png"></a></mdb-navbar-brand>
+
+  </links>
+  <!-- Collapsible content -->
+
+</mdb-navbar>
+<!--/.Navbar-->
+<router-outlet></router-outlet>
+<!-- Footer -->
+<footer class="page-footer font-small black">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© dress it easy
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->

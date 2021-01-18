@@ -1,0 +1,18 @@
+.b{
+    margin: auto;
+    width: 40%;
+    margin-top: 5%;
+    margin-bottom: 11.2%;
+    direction: rtl;
+}
+::ng-deep .form-control:focus {
+    border-color: #9a8e8e;
+    box-shadow: 0 0 0 0.2rem rgb(174 175 177 / 25%);
+}
+.btn-i {
+    background-color: #988236!important;
+}
+a {
+    color: #988236 !important;
+    font-weight: 600;
+}

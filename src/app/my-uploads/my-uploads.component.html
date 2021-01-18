@@ -1,0 +1,30 @@
+<mdb-card class="body">
+    <p class="h4 mb-4" style="text-align: center;">שמלות שפרסמתי</p>
+
+    <div class="card-deck">
+        <mdb-card class="col-4">
+            <div class="view overlay waves-light" mdbWavesEffect>
+                <!-- Card img -->
+                <mdb-card-img
+                    src="https://www.keds.co.il/media/catalog/product/cache/2/image/465x465/9df78eab33525d08d6e5fb8d27136e95/1/1/11c047823-1.jpg"
+                    alt="Card image cap">
+                </mdb-card-img>
+                <a>
+                    <div class="mask rgba-white-slight"></div>
+                </a>
+            </div>
+            <!--Card content-->
+            <mdb-card-body>
+               
+                <button title="ערוך שמלה" [routerLink]="['/edit']" mdbBtn type="button" class="color-gold" mdbWavesEffect>
+                    <mdb-icon far icon="edit"></mdb-icon>
+                </button>
+                <button title="מחק שמלה" mdbBtn type="button" class="color-gold" mdbWavesEffect>
+                    <mdb-icon far icon="trash-alt"></mdb-icon>
+                </button>
+            </mdb-card-body>
+        </mdb-card>
+
+    </div>
+
+</mdb-card>

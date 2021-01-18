@@ -1,0 +1,184 @@
+.body{
+    padding: 5%;
+    margin: 2%;
+    width: 80%;
+    margin-top: 6% !important;
+}
+::ng-deep .custom-control-inline {
+     display: block !important; 
+     margin-right: 0 !important; 
+}
+::ng-deep .custom-control-label::before {
+    margin-left: 100% !important;
+}
+::ng-deep .custom-control-label::after {
+    margin-left: 100% !important;
+}
+::ng-deep .custom-control-label::before {
+    margin-left: 100% !important;
+}
+::ng-deep .custom-control-label::after {
+    margin-left: 100% !important;
+}
+.span{
+    position: relative;
+    right: 30px;
+}
+::ng-deep .text .card-text:last-child {
+    margin-bottom: 0px !important;
+}
+
+::ng-deep.side-nav {
+    position: fixed;
+    top: 12%;
+    right: 0; 
+    z-index: 1040;
+    width: 15rem;
+    height: 79%;
+    padding: 0;
+    padding-bottom: 3.75rem;
+    margin: 0;
+    overflow: hidden;
+    list-style-type: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    transform: translateX(-100%);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    will-change: transform;
+}
+::ng-deep.mdb-skin-custom .side-nav {
+    background-color: #f9f9f9 !important;
+}
+
+::ng-deep.side-nav.fixed {
+    position: fixed;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+::ng-deep.border-top{
+    margin-top: 20px !important;
+    padding-top: 10px !important;
+}
+.sp-r{
+    font-size: small;
+}
+::ng-deep .card-deck .card {
+    flex: auto;
+}
+::ng-deep.col-4 {
+    max-width: 30% !important;
+    margin-bottom: 1% !important;
+}
+.btn{
+ padding:10px !important;
+ border-radius: 150%;
+}
+::ng-deep.far:before {
+    margin: 3px !important;
+    font-size: x-large !important;
+}
+::ng-deep.fas:before {
+    margin: 3px !important;
+    font-size: x-large !important;
+    //color: white;
+}
+.color-gold{
+    background-color:  #988236 !important;
+}
+
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+   input[type='range']::-webkit-slider-thumb {
+      background: #988236;
+
+    }
+    input[type='range']::-webkit-slider-thumb:active {
+        box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem #988236
+    }
+  input[type='range']::-webkit-slider-thumb:checked:focus {
+    box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem #988236
+}
+
+}
+::ng-deep.card-text{
+text-align: right !important;
+font-size: medium !important;
+color: black !important;
+}
+::ng-deep .mdb-cr-t > p{
+    display: inline !important;
+    float: right !important;
+    margin-top: 5% !important;
+}
+::ng-deep.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+    background-color: #988236!important;
+    border-color: black;
+  }
+  
+  ::ng-deep .custom-checkbox .custom-control-input:checked:focus ~ .custom-control-label::before {
+    box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem #988236
+  }
+  ::ng-deep .custom-checkbox .custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem #988236
+  }
+  ::ng-deep .custom-checkbox .custom-control-input:active ~ .custom-control-label::before {
+    background-color: #978853; 
+  }
+
+  ::ng-deep  .custom-control-input:checked~.custom-control-label::before {
+        background-color:#988236!important;
+        border-color: black;
+
+}
+::ng-deep   .custom-control-input:checked:focus ~ .custom-control-label::before {
+    box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem #988236
+
+}
+::ng-deep   .custom-control-input:focus ~ .custom-control-label::before{
+    box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem #988236
+
+}
+::ng-deep   .custom-control-input:active ~ .custom-control-label::before{
+    background-color:  #988236;
+
+}
+
+
+
+::ng-deep.ng-select .ng-has-value .ng-placeholder, .ng-select.ng-select-opened .ng-placeholder {
+    transform: translateY(-1.28125em) scale(0.75) perspective(100px) translateZ(0.001px) translateX(230%) !important;
+}
+::ng-deep.ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value {
+    background-color: #988236 !important;
+}
+::ng-deep.ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-selected {
+    color: black !important;
+}
+::ng-deep.md-form input[type=text]:focus:not([readonly]), .md-form input[type=password]:focus:not([readonly]), .md-form input[type=email]:focus:not([readonly]), .md-form input[type=url]:focus:not([readonly]), .md-form input[type=time]:focus:not([readonly]), .md-form input[type=date]:focus:not([readonly]), .md-form input[type=datetime-local]:focus:not([readonly]), .md-form input[type=tel]:focus:not([readonly]), .md-form input[type=number]:focus:not([readonly]), .md-form input[type=search-md]:focus:not([readonly]), .md-form input[type=search]:focus:not([readonly]), .md-form textarea.md-textarea:focus:not([readonly]) {
+    box-shadow: 0 1px 0 0 black;
+    border-bottom: 1px solid black;
+}
+
+::ng-deep.border-top{
+    margin-top: 20px !important;
+    padding-top: 10px !important;
+}
+.sp-r{
+    font-size: small;
+}
+::ng-deep .card-deck .card {
+    flex: auto;
+}
+::ng-deep.col-4 {
+    max-width: 30% !important;
+    margin-bottom: 1% !important;
+}
+::ng-deep mdb-card-text{
+    font-weight:500 !important ;
+}
+::ng-deep .card .card-body .card-text {
+    font-weight: 500 !important;
+}

@@ -1,0 +1,188 @@
+<div style="margin: 5%;">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <p class="h4 mb-4" style="text-align: center;">פרסום שמלה</p>
+
+                <div class="row">
+                    <div class="col-lg-5">
+                        <img class="d-block w-100" src="../../assets/image/upload.png" alt="img">
+                        <div class="mb-3">
+                            <input class="form-control btnf" type="file" id="formFile">
+                            <button title="העלה תמונה" mdbBtn type="button" class="color-gold btn1" mdbWavesEffect>
+                                <mdb-icon fas icon="upload"></mdb-icon>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-lg-7" >
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link c" id="home-tab" data-bs-toggle="tab" href="#home" role="tab"
+                                    aria-controls="home" aria-selected="true">3</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link c" id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab"
+                                    aria-controls="profile" aria-selected="false">
+                                    <mdb-icon fas icon="angle-double-left"></mdb-icon>2
+                                </a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link c active" id="contact-tab" data-bs-toggle="tab" href="#contact"
+                                    role="tab" aria-controls="contact" aria-selected="false">
+                                    <mdb-icon fas icon="angle-double-left"></mdb-icon>1
+                                </a>
+                            </li>
+                        </ul>
+                        <div style="direction: rtl;" class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <mdb-card-text class="text border-top">קטגוריה:
+                                </mdb-card-text>
+
+                                <div (click)="chooseCat(3)" class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="defaultInline3"
+                                        name="inlineDefaultRadiosExample" mdbInput checked>
+                                    <label class="custom-control-label" for="defaultInline3"><span
+                                            class="span">נשים</span></label>
+                                </div>
+                                <div (click)="chooseCat(2)" class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="defaultInline2"
+                                        name="inlineDefaultRadiosExample" mdbInput>
+                                    <label class="custom-control-label" for="defaultInline2"><span class="span">נערות
+                                        </span></label>
+                                </div>
+                                <div (click)="chooseCat(1)" class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="defaultInline1"
+                                        name="inlineDefaultRadiosExample" mdbInput>
+                                    <label class="custom-control-label" for="defaultInline1"><span
+                                            class="span">ילדות</span></label>
+                                </div>
+
+
+                                <mdb-card-text class="text border-top"> צבע:
+                                </mdb-card-text>
+
+                                <ng-select [items]="colors$ | async" [multiple]="true" [closeOnSelect]="false"
+                                    [searchable]="false" bindLabel="color" placeholder="בחרי צבע:"
+                                    [(ngModel)]="selectedColor">
+                                </ng-select>
+
+                                <mdb-card-text class="text border-top"> תיאור:
+                                </mdb-card-text>
+
+                                <div class="md-form">
+                                    <textarea type="text" id="form7" placeholder="תיאור..." class="md-textarea md-textarea-auto form-control"
+                                        mdbInput></textarea>
+                                </div>
+                                <mdb-card-text class="text border-top">מחיר :
+                                </mdb-card-text>
+                                <div class="md-form">
+                                    <input type="number" placeholder="כתבי מחיר:" class="form-control" min="0"
+                                        max="1500" id="numberInputEx" mdbInput>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                <mdb-card-text class="text border-top">מידה :
+                                </mdb-card-text>
+
+                                <ng-select [items]="sizes$ | async" [multiple]="true" [closeOnSelect]="false"
+                                    [searchable]="false" bindLabel="size" placeholder="בחרי מידה:"
+                                    [(ngModel)]="selectedSize">
+                                </ng-select>
+                                <mdb-card-text class="text border-top">גובה :
+                                </mdb-card-text>
+                                <div class="md-form">
+                                    <input type="number" placeholder="כתבי גובה:" class="form-control"
+                                        id="numberInputEx" mdbInput>
+                                </div>
+                                <mdb-card-text class="text border-top"> היקף חזה:
+                                </mdb-card-text>
+                                <div class="md-form">
+                                    <input type="number" placeholder="כתבי היקף חזה:" class="form-control"
+                                    id="numberInputEx" mdbInput>                                </div>
+                                <mdb-card-text class="text border-top"> היקף מתניים:
+                                </mdb-card-text>
+                                <div class="md-form">
+                                    <input type="number" placeholder="כתבי היקף מתניים:" class="form-control"
+                                    id="numberInputEx" mdbInput></div>
+                                <mdb-card-text class="text border-top"> היקף ירכיים:
+                                </mdb-card-text>
+                                <div class="md-form">
+                                    <input type="number" placeholder="כתבי היקף ירכיים:" class="form-control"
+                                    id="numberInputEx" mdbInput></div>
+                             
+                                <mdb-card-text class="text border-top">סוג בד :
+                                </mdb-card-text>
+
+                                <ng-select [items]=" fabric$ | async" [multiple]="true" [closeOnSelect]="false"
+                                    [searchable]="false" bindLabel="type" placeholder="בחרי סוג בד:"
+                                    [(ngModel)]="selectedFabric">
+                                </ng-select>
+                            </div>
+                            <div class="tab-pane fade show active" id="contact" role="tabpanel"
+                                aria-labelledby="contact-tab">
+                                <mdb-card-text class="text border-top"> אזור:
+                                </mdb-card-text>
+
+                                <mdb-checkbox [inline]="true" [default]="true"><span class="span">דרום</span>
+                                </mdb-checkbox>
+
+                                <mdb-checkbox [inline]="true" [default]="true"><span class="span">צפון</span>
+                                </mdb-checkbox>
+
+                                <mdb-checkbox [inline]="true" [default]="true"><span class="span">מרכז</span>
+                                </mdb-checkbox>
+                                <!-- Send button -->
+
+                                <mdb-card-text class="text border-top"> עיר:
+                                </mdb-card-text>
+                                <div class="md-form">
+                                    <input mdbInput type="text" id="form1" class="form-control" placeholder="בחר עיר:">
+                                </div>
+
+                                <mdb-card-text class="text border-top"> מספר פלאפון:
+                                </mdb-card-text>
+                                <div class="md-form">
+                                    <input mdbInput type="text" id="form1" class="form-control" placeholder="פלאפון:">
+                                </div>
+                                <mdb-card-text class="text border-top"> תאריך קניה/תפירה:
+                                </mdb-card-text>
+                                
+                                <form class="form-inline">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <input class="form-control" placeholder="yyyy-mm-dd" name="dp"
+                                                [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
+                                            <div class="input-group-append">
+                                                <a class="calendar" (click)="d.toggle()" type="button"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                                <mdb-card-text class="text border-top"> תאריך תפוס:
+                                </mdb-card-text>
+                                
+                                <form class="form-inline">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <input class="form-control" placeholder="yyyy-mm-dd" name="dp1"
+                                                [(ngModel)]="model1" ngbDatepicker #d1="ngbDatepicker">
+                                            <div class="input-group-append">
+                                                <a class="calendar" (click)="d1.toggle()" type="button"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+
+                        <button title="פרסם שמלה" mdbBtn type="button" class="color-gold" mdbWavesEffect>
+                            פרסם <mdb-icon fas icon="cloud-upload-alt"></mdb-icon>
+                        </button>
+                        <!-- /.Add to Cart -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

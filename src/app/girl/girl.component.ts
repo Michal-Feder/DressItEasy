@@ -25,11 +25,11 @@ export class GirlComponent implements OnInit {
   send(e) {
     console.log("הערה", this.text, e);
     // פה תשמרי את ההערה שנרשמה this.text
-    document.getElementById('t').style.display = "none";
+    e.target.parentElement.parentElement.parentElement.style.display = "none";
     this.text = '';
   }
-  addText(){
-    document.getElementById('t').style.display = "flex";
+  addText(e){
+    e.target.parentElement.parentElement.parentElement.children[0].style.display = "flex";
   }
   chooseCat(v) {
     switch (v) {

@@ -13,8 +13,8 @@ export class MaidenComponent implements OnInit {
   range = 0;
   sizes$: Observable<any[]>;
   colors$: Observable<any[]>;
-  selectedSize = [{ }];
-  selectedColor = [{ }];
+  selectedSize = [{}];
+  selectedColor = [{}];
   text;
   constructor(private dataService: DataService, private config: NgSelectConfig) {
     this.config.notFoundText = 'Custom not found';
@@ -29,15 +29,15 @@ export class MaidenComponent implements OnInit {
   send(e) {
     console.log("הערה", this.text, e);
     // פה תשמרי את ההערה שנרשמה this.text
-    document.getElementById('t').style.display = "none";
+    e.target.parentElement.parentElement.parentElement.style.display = "none";
     this.text = '';
   }
-  addText(){
-    document.getElementById('t').style.display = "flex";
+  addText(e){
+    e.target.parentElement.parentElement.parentElement.children[0].style.display = "flex";
   }
   clearModel() {
     this.selectedSize = [];
-}
+  }
   chooseCat(v) {
     switch (v) {
       case 1:

@@ -16,3 +16,6 @@ a {
     color: #988236 !important;
     font-weight: 600;
 }
+::ng-deep .btn-info:not([disabled]):not(.disabled).active, .btn-info:not([disabled]):not(.disabled):active, .show>.btn-info.dropdown-toggle {
+    background-color: #b69d45!important;
+}

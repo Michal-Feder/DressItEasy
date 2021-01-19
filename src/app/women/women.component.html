@@ -260,7 +260,7 @@ transform: translateX(0px);">
         <mdb-card-text class="text border-top"> :צבע
         </mdb-card-text>
 
-        <ng-select [items]="colors$ | async" [multiple]="true" [closeOnSelect]="false" [searchable]="false"
+        <ng-select id="s2" [items]="colors$ | async" [multiple]="true" [closeOnSelect]="false" [searchable]="false"
             bindLabel="color" placeholder=":בחרי צבע" [(ngModel)]="selectedColor">
         </ng-select>
 

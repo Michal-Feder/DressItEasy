@@ -34,9 +34,9 @@
     right: 0; 
     z-index: 1040;
     width: 15rem;
-    height: 79%;
+    height: 85%;
     padding: 0;
-    padding-bottom: 3.75rem;
+    padding-bottom: 1rem;
     margin: 0;
     overflow: hidden;
     list-style-type: none;
@@ -73,16 +73,16 @@
     margin-bottom: 1% !important;
 }
 .btn{
- padding:10px !important;
+ padding:8px !important;
  border-radius: 150%;
 }
 ::ng-deep.far:before {
     margin: 3px !important;
-    font-size: x-large !important;
+    font-size: large !important;
 }
 ::ng-deep.fas:before {
     margin: 3px !important;
-    font-size: x-large !important;
+    font-size: large !important;
     //color: white;
 }
 .color-gold{
@@ -160,21 +160,6 @@ color: black !important;
 ::ng-deep.md-form input[type=text]:focus:not([readonly]), .md-form input[type=password]:focus:not([readonly]), .md-form input[type=email]:focus:not([readonly]), .md-form input[type=url]:focus:not([readonly]), .md-form input[type=time]:focus:not([readonly]), .md-form input[type=date]:focus:not([readonly]), .md-form input[type=datetime-local]:focus:not([readonly]), .md-form input[type=tel]:focus:not([readonly]), .md-form input[type=number]:focus:not([readonly]), .md-form input[type=search-md]:focus:not([readonly]), .md-form input[type=search]:focus:not([readonly]), .md-form textarea.md-textarea:focus:not([readonly]) {
     box-shadow: 0 1px 0 0 black;
     border-bottom: 1px solid black;
-}
-
-::ng-deep.border-top{
-    margin-top: 20px !important;
-    padding-top: 10px !important;
-}
-.sp-r{
-    font-size: small;
-}
-::ng-deep .card-deck .card {
-    flex: auto;
-}
-::ng-deep.col-4 {
-    max-width: 30% !important;
-    margin-bottom: 1% !important;
 }
 ::ng-deep mdb-card-text{
     font-weight:500 !important ;

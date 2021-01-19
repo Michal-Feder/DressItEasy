@@ -12,20 +12,12 @@
                 </a>
             </div>
             <!--Card conten -->
-           
+
             <mdb-card-body>
-                <div id="t" style="display: none;" class="md-form input-group input-group-sm mb-3">
-                    <div style="cursor: pointer;" (click)="send($event)" class="input-group-prepend">
-                        <mdb-icon fas icon="paper-plane"></mdb-icon>                    </div>
-                    <input style="direction: rtl;" [(ngModel)]="text" placeholder="כתבי הערה:" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroupMaterial-sizing-sm">
-                  </div>
                 <mdb-card-text class="mdb-cr-t"> <span>מידה: 36</span>
                 </mdb-card-text>
                 <button title="הוסף לרשימת משאלות" mdbBtn type="button" class="color-gold" mdbWavesEffect>
                     <mdb-icon far icon="heart"></mdb-icon>
-                </button>
-                <button title="הוסף הערה" (click)="addText($event)" mdbBtn type="button" class="color-gold" mdbWavesEffect>
-                    <mdb-icon fas icon="pencil-alt"></mdb-icon>
                 </button>
                 <button title="הגדל שמלה" [routerLink]="['/dress']" mdbBtn type="button" class="color-gold"
                     mdbWavesEffect>
@@ -56,28 +48,27 @@ transform: translateX(0px);">
         <mdb-card-text class="text border-top"> :קטגוריה
         </mdb-card-text>
         <div (click)="chooseCat(3)" class="custom-control custom-radio custom-control-inline">
-            <input type="radio" class="custom-control-input" id="defaultInline3"
-                name="inlineDefaultRadiosExample" mdbInput checked>
-            <label class="custom-control-label" for="defaultInline3"><span
-                    class="span">נשים</span></label>
+            <input type="radio" class="custom-control-input" id="defaultInline3" name="inlineDefaultRadiosExample"
+                mdbInput checked>
+            <label class="custom-control-label" for="defaultInline3"><span class="span">נשים</span></label>
         </div>
         <div (click)="chooseCat(2)" class="custom-control custom-radio custom-control-inline">
-            <input type="radio" class="custom-control-input" id="defaultInline2"
-                name="inlineDefaultRadiosExample" mdbInput>
+            <input type="radio" class="custom-control-input" id="defaultInline2" name="inlineDefaultRadiosExample"
+                mdbInput>
             <label class="custom-control-label" for="defaultInline2"><span class="span">נערות
                 </span></label>
         </div>
         <div (click)="chooseCat(1)" class="custom-control custom-radio custom-control-inline">
-            <input checked  type="radio" class="custom-control-input" id="defaultInline1"
+            <input checked type="radio" class="custom-control-input" id="defaultInline1"
                 name="inlineDefaultRadiosExample" mdbInput>
-            <label class="custom-control-label" for="defaultInline1"><span
-                    class="span">ילדות</span></label>
+            <label class="custom-control-label" for="defaultInline1"><span class="span">ילדות</span></label>
         </div>
         <mdb-card-text class="text border-top"> :טווח מחירים
         </mdb-card-text>
         <div class="md-form">
-            <input type="number" [(ngModel)]="range"  placeholder=":בחר טווח" class="form-control" min="0" max="1500" id="numberInputEx" mdbInput>
-          </div>
+            <input style="direction: rtl;" type="number" placeholder="בחר טווח:" [(ngModel)]="range"
+                class="form-control" min="0" max="1500" id="numberInputEx" mdbInput>
+        </div>
         <input type="range" [(ngModel)]="range" class="form-range" min="0" max="1500" id="customRange1">
         <div style="width: 100%;"> <span class="sp-r" style="position: relative;right: 93%;">|</span>
             <span class="sp-r" style="position: relative;right: 47.5%;">|</span>
@@ -87,28 +78,19 @@ transform: translateX(0px);">
         <span class="sp-r">1500</span>
         <mdb-card-text class="text border-top"> :מידה
         </mdb-card-text>
-  
-<ng-select
-[items]="sizes$ | async"
-[multiple]="true"
-[closeOnSelect]="false"
-[searchable]="false"
-bindLabel="size"
-placeholder=":בחרי מידה"
-[(ngModel)]="selectedSize">
-</ng-select>
 
-<mdb-card-text class="text border-top"> :צבע
-</mdb-card-text>
+        <ng-select style="direction: rtl;" [items]="sizes$ | async" [multiple]="true" [closeOnSelect]="false"
+            [searchable]="false" bindLabel="size" placeholder="בחרי מידה:" [(ngModel)]="selectedSize">
+        </ng-select>
 
-<ng-select
-[items]="colors$ | async"
-[multiple]="true"
-[closeOnSelect]="false"
-[searchable]="false"
-bindLabel="color"
-placeholder=":בחרי צבע"
-[(ngModel)]="selectedColor">
-</ng-select>
+        <mdb-card-text class="text border-top"> :צבע
+        </mdb-card-text>
+        <div class="md-form" style="direction: rtl;">
+            <input mdbInput type="text" id="form1" class="form-control" placeholder="כתבי צבע:">
+        </div>
+        <ng-select style="direction: rtl;" id="s2" [items]="colors$ | async" [multiple]="true" [closeOnSelect]="false"
+            [searchable]="false" bindLabel="color" placeholder="בחרי צבע:" [(ngModel)]="selectedColor">
+        </ng-select>
+
     </mdb-card-body>
 </mdb-card>

@@ -12,6 +12,7 @@ import {CartComponent} from './cart/cart.component'
 import {EditDressComponent} from './edit-dress/edit-dress.component'
 import {LoginComponent} from './login/login.component';
 import {SignupComponent} from './signup/signup.component';
+import {DressRentedComponent} from './dress-rented/dress-rented.component';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
@@ -27,6 +28,7 @@ const routes: Routes = [
   { path: 'edit', component: EditDressComponent },
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
+  { path: 'rented', component: DressRentedComponent },
   { path: '', redirectTo: '/women', pathMatch: 'full' }, // redirect to `first-component`
 
 ];

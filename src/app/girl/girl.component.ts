@@ -9,7 +9,6 @@ import { DataService } from '../data.service';
   styleUrls: ['./girl.component.scss']
 })
 export class GirlComponent implements OnInit {
-  text;
   selectedCar: number;
   range = 0;
   sizes$: Observable<any[]>;
@@ -22,15 +21,7 @@ export class GirlComponent implements OnInit {
     this.config.appendTo = 'body';
     this.config.bindValue = 'value';
   }
-  send(e) {
-    console.log("הערה", this.text, e);
-    // פה תשמרי את ההערה שנרשמה this.text
-    e.target.parentElement.parentElement.parentElement.style.display = "none";
-    this.text = '';
-  }
-  addText(e){
-    e.target.parentElement.parentElement.parentElement.children[0].style.display = "flex";
-  }
+ 
   chooseCat(v) {
     switch (v) {
       case 1:

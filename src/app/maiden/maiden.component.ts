@@ -26,15 +26,7 @@ export class MaidenComponent implements OnInit {
     this.sizes$ = this.dataService.getSizeMaiden();
     this.colors$ = this.dataService.getColors();
   }
-  send(e) {
-    console.log("הערה", this.text, e);
-    // פה תשמרי את ההערה שנרשמה this.text
-    e.target.parentElement.parentElement.parentElement.style.display = "none";
-    this.text = '';
-  }
-  addText(e){
-    e.target.parentElement.parentElement.parentElement.children[0].style.display = "flex";
-  }
+  
   clearModel() {
     this.selectedSize = [];
   }

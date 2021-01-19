@@ -9,7 +9,6 @@ import { DataService } from '../data.service';
   styleUrls: ['./women.component.scss']
 })
 export class WomenComponent implements OnInit {
-  text;
   selectedCar: number;
   range = 0;
   sizes$: Observable<any[]>;
@@ -27,15 +26,7 @@ export class WomenComponent implements OnInit {
     this.sizes$ = this.dataService.getSizeWomen();
     this.colors$ = this.dataService.getColors();
   }
-  send(e) {
-    console.log("הערה", this.text, e);
-    // פה תשמרי את ההערה שנרשמה this.text
-    e.target.parentElement.parentElement.parentElement.style.display = "none";
-    this.text = '';
-  }
-  addText(e){
-    e.target.parentElement.parentElement.parentElement.children[0].style.display = "flex";
-  }
+ 
   clearModel() {
     this.selectedSize = [];
   }

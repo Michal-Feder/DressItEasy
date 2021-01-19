@@ -60,7 +60,9 @@
 
                                 <mdb-card-text class="text border-top"> צבע:
                                 </mdb-card-text>
-
+                                <div class="md-form">
+                                    <input mdbInput type="text" id="form1" class="form-control" placeholder="כתבי צבע:">
+                                </div>
                                 <ng-select [items]="colors$ | async" [multiple]="true" [closeOnSelect]="false"
                                     [searchable]="false" bindLabel="color" placeholder="בחרי צבע:"
                                     [(ngModel)]="selectedColor">
@@ -112,7 +114,9 @@
                              
                                 <mdb-card-text class="text border-top">סוג בד :
                                 </mdb-card-text>
-
+                                <div class="md-form">
+                                    <input mdbInput type="text" id="form1" class="form-control" placeholder="כתבי סוג בד:">
+                                </div>
                                 <ng-select [items]=" fabric$ | async" [multiple]="true" [closeOnSelect]="false"
                                     [searchable]="false" bindLabel="type" placeholder="בחרי סוג בד:"
                                     [(ngModel)]="selectedFabric">
@@ -148,11 +152,11 @@
                                 </mdb-card-text>
                                 
                                 <form class="form-inline">
-                                    <div class="form-group">
+                                    <div class="form-group" style="direction: ltr;">
                                         <div class="input-group">
                                             <input class="form-control" placeholder="yyyy-mm-dd" name="dp"
                                                 [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
-                                            <div class="input-group-append">
+                                            <div  class="input-group-append">
                                                 <a class="calendar" (click)="d.toggle()" type="button"></a>
                                             </div>
                                         </div>
@@ -162,7 +166,7 @@
                                 </mdb-card-text>
                                 
                                 <form class="form-inline">
-                                    <div class="form-group">
+                                    <div class="form-group" style="direction: ltr;">
                                         <div class="input-group">
                                             <input class="form-control" placeholder="yyyy-mm-dd" name="dp1"
                                                 [(ngModel)]="model1" ngbDatepicker #d1="ngbDatepicker">

@@ -30,6 +30,7 @@ import { SignupComponent } from './signup/signup.component';
 import { MyUploadsComponent } from './my-uploads/my-uploads.component';
 import { LoveComponent } from './love/love.component';
 import { CartComponent } from './cart/cart.component';
+import { DressRentedComponent } from './dress-rented/dress-rented.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { CartComponent } from './cart/cart.component';
     MyUploadsComponent,
     LoveComponent,
     CartComponent,
+    DressRentedComponent,
   ],
   imports: [
     BrowserModule,
